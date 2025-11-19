@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Piano Virtuel</title>
+    </head>
+    <body>
+        <header>
+            <h1>Piano Virtuel pour les passionnés du piano</h1>
+            <p>Joue avec des clics ou avec les touches du clavier</p>
+        </header>
+        <main>
+            <section id="controls">
+                <div class="setting-group">
+                    <label for="soundType">Type de son :</label>
+                    <select id="soundType">
+                      <option value="grand">Grand Piano</option>
+                      <option value="strings">Strings</option>
+                      <option value="electric">Electric Piano</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label for="octave">Octave :</label>
+                    <input type="number" id="octave" min="-5" max="5" value="0">
+                </div>
+                <div class="setting-group">
+                    <button id="metronomeBtn">Métronome</button>
+                    <span id="metronomeStatus"></span>
+                </div>
+            </section>
+            <section id="piano">
+                <div class="white-keys">
+                    <div class="key white" data-note="Do"></div>
+                    <div class="key white" data-note="Ré"></div>
+                    <div class="key white" data-note="Mi"></div>
+                    <div class="key white" data-note="Fa"></div>
+                    <div class="key white" data-note="Sol"></div>
+                    <div class="key white" data-note="La"></div>
+                    <div class="key white" data-note="Si"></div>
+                    <div class="key white" data-note="Do"></div>
+                    <div class="key white" data-note="Ré"></div>
+                    <div class="key white" data-note="Mi"></div>
+                </div>
+                <div class="black-keys">
+                    <div class="black key" data-note="Do#"></div>
+                    <div class="black key" data-note="Ré#"></div>
+                    <div class="black key" data-note="Fa#"></div>
+                    <div class="black key" data-note="Sol#"></div>
+                    <div class="black key" data-note="La#"></div>
+                    <div class="black key" data-note="Do#"></div>
+                    <div class="black key" data-note="Ré#"></div>
+                </div>
+            </section>
+            <div class="setting-group">
+                <button id="sustain">Sustain</button>
+                <span id="sustainStatus"></span>
+            </div>
+			<section id="history">
+			  <h2>Enregistrement</h2>
+			  <div id="log"></div>
+			</section>
+        </main>
+    </body>
+    <footer>© 2025 - Jeu Piano Virtuel</footer>
+</html>
