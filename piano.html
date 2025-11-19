@@ -11,8 +11,8 @@
             <p>Joue avec des clics ou avec les touches du clavier</p>
         </header>
         <main>
-            <section id="controls">
-                <div class="setting-group">
+            <section id="param">
+                <div class="son">
                     <label for="soundType">Type de son :</label>
                     <select id="soundType">
                       <option value="grand">Grand Piano</option>
@@ -20,47 +20,57 @@
                       <option value="electric">Electric Piano</option>
                     </select>
                 </div>
-                <div class="setting-group">
+                <div class="oct">
                     <label for="octave">Octave :</label>
                     <input type="number" id="octave" min="-5" max="5" value="0">
                 </div>
-                <div class="setting-group">
+                <div class="met">
                     <button id="metronomeBtn">Métronome</button>
-                    <span id="metronomeStatus"></span>
+                    <span id="metro"></span>
                 </div>
             </section>
             <section id="piano">
-                <div class="white-keys">
-                    <div class="key white" data-note="Do"></div>
-                    <div class="key white" data-note="Ré"></div>
-                    <div class="key white" data-note="Mi"></div>
-                    <div class="key white" data-note="Fa"></div>
-                    <div class="key white" data-note="Sol"></div>
-                    <div class="key white" data-note="La"></div>
-                    <div class="key white" data-note="Si"></div>
-                    <div class="key white" data-note="Do"></div>
-                    <div class="key white" data-note="Ré"></div>
-                    <div class="key white" data-note="Mi"></div>
+                <div class="blanches">
+                    <div class="touche blanche" id="do"></div>
+					<div class="touche blanche" id="re"></div>
+					<div class="touche blanche" id="mi"></div>
+					<div class="touche blanche" id="fa"></div>
+					<div class="touche blanche" id="sol"></div>
+					<div class="touche blanche" id="la"></div>
+					<div class="touche blanche" id="si"></div>
                 </div>
-                <div class="black-keys">
-                    <div class="black key" data-note="Do#"></div>
-                    <div class="black key" data-note="Ré#"></div>
-                    <div class="black key" data-note="Fa#"></div>
-                    <div class="black key" data-note="Sol#"></div>
-                    <div class="black key" data-note="La#"></div>
-                    <div class="black key" data-note="Do#"></div>
-                    <div class="black key" data-note="Ré#"></div>
+                <div class="noires">
+                    <div class="touche noire" id="dod"></div>
+                    <div class="touche noire" id="redi"></div>
+                    <div class="touche noire" id="fad"></div>
+                    <div class="touche noire" id="sold"></div>
+                    <div class="touche noire" id="lad"></div>
                 </div>
             </section>
-            <div class="setting-group">
+            <div class="pedale">
                 <button id="sustain">Sustain</button>
-                <span id="sustainStatus"></span>
+                <span id="sustains"></span>
             </div>
-			<section id="history">
+			<section id="historique">
 			  <h2>Enregistrement</h2>
 			  <div id="log"></div>
 			</section>
+			<div class="choix">
+			  <h3>Chansons disponibles</h3>
+			  <label for="presetSongs">Choisir une chanson :</label>
+			  <select id="presetSongs" style="width: 220px;">
+				<option value="">-- Sélectionnez une chanson --</option>
+				<option value="audio/1.mp3">Chanson 1</option>
+				<option value="audio/2.mp3">Chanson 2</option>
+				<option value="audio/3.mp3">Chanson 3</option>
+			  </select>
+			  <button id="lectbtn">Lecture</button>
+			  <button id="stopbtn">Stop</button>
+
+			  <br><br>
+			  <audio id="audiop"></audio>
+			</div>
         </main>
-    </body>
-    <footer>© 2025 - Jeu Piano Virtuel</footer>
+		<footer>© 2025 - Jeu Piano Virtuel réalisé par Amina Jemai</footer>
+	</body>
 </html>
