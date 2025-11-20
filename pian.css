@@ -1,0 +1,154 @@
+h1{
+    padding:1.5rem;
+    margin:1rem;
+    position:sticky;
+	top:0;
+    align-items: center;
+    background-color: darkseagreen;
+    text-align: center;
+    border-radius: 1rem;
+    color:aliceblue;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.intro{
+    padding:1.5rem;
+    margin:1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    background-color: rgb(224, 247, 230);
+    border-radius: 1rem;
+
+}
+p{
+    font-weight:bold;
+    font-size:1.5rem;
+    text-align: center;
+}
+.bl{
+    display:flex;
+    align-items: flex-end;
+    position:relative;
+    justify-content: center;
+}
+.toucheblanchemanip{
+    width:3rem;
+    height:4rem;
+    background:white;
+    border: 0.1rem solid #ccc;
+    border-bottom: 0.2rem solid #aaa;
+    border-radius:0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    margin:0 0.1rem;
+    position:relative;
+    color:black;
+    text-align: center;
+    font-weight: bold;
+}
+.noi{
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    margin-right: 23rem;
+    display: flex;
+    pointer-events: none;
+}
+.touchenoiremanip{
+    width:1.5rem;
+    height:2.5rem;
+    background:black;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    margin:0 0.01rem;
+    z-index: 5;
+    color:white;
+    text-align: center;
+}
+main{
+    padding:1.5rem;
+    margin:1rem;
+    align-items: center;
+    background-color: rgb(247, 255, 252);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+.blanches{
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    position:relative;
+    padding-top:5rem;
+}
+.toucheblanche{
+    width:4.7rem;
+    height:10rem;
+    background:white;
+    border: 0.1rem solid #ccc;
+    border-bottom: 0.2rem solid #aaa;
+    border-radius:0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    margin:0 0.1rem;
+    position:relative;
+}
+.noires{
+    justify-content: center;
+    position:absolute;
+    margin-left: 21rem;
+    margin-top: 5rem;
+    top:0;
+    left:0;
+    width:100%;
+    height:5rem;
+    pointer-events:none;
+
+}
+.touchenoire{
+    width:3.3rem;
+    height:6rem;
+    background:black;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    margin:0 0.05rem;
+    z-index: 10;
+}
+#dod {
+    position:absolute;
+    left: calc(5rem * 0.8);
+}
+#redi {
+    position:absolute;
+    left: calc(5rem * 1.8);
+}
+#fad {
+    position:absolute;
+    left: calc(5rem * 3.8);
+}
+#sold {
+    position:absolute;
+    left: calc(5rem * 4.8);
+}
+#lad {
+    position:absolute;
+    left: calc(5rem * 5.85);
+}
+#dodm {
+    position:absolute;
+    left: calc(3rem * 0.8);
+}
+#redim {
+    position:absolute;
+    left: calc(3rem * 2);
+}
+#fadm {
+    position:absolute;
+    left: calc(3rem * 4.1);
+}
+#soldm {
+    position:absolute;
+    left: calc(3rem * 5.25);
+}
+#ladm {
+    position:absolute;
+    left: calc(3rem * 6.4);
+}
+footer{
+    text-align: center;
+}
