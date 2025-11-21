@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Piano Virtuel</title>
+        <script src="pianoo.js"></script>
         <link rel="stylesheet" href="pian.css">
     </head>
     <body>
@@ -43,7 +44,7 @@
                 </div>
                 <div class="oct">
                     <label for="octave">Octave :</label>
-                    <input type="number" id="octave" min="-5" max="5" value="0">
+                    <input type="number" id="octave" min="-1" max="1" value="0">
                 </div>
                 <div class="met">
                     <button id="metronomeBtn">Métronome</button>
@@ -72,25 +73,31 @@
                 <button id="sustain">Sustain</button>
                 <span id="sustains"></span>
             </div>
-			<section id="historique">
-			  <h2>Enregistrement</h2>
-			  <div id="log"></div>
-			</section>
-			<div class="choix">
-			  <h3>Chansons disponibles</h3>
-			  <label for="presetSongs">Choisir une chanson :</label>
-			  <select id="presetSongs" style="width: 220px;">
-				<option value="">-- Sélectionnez une chanson --</option>
-				<option value="audio/1.mp3">Chanson 1</option>
-				<option value="audio/2.mp3">Chanson 2</option>
-				<option value="audio/3.mp3">Chanson 3</option>
-			  </select>
-			  <button id="lectbtn">Lecture</button>
-			  <button id="stopbtn">Stop</button>
-
-			  <br><br>
-			  <audio id="audiop"></audio>
-			</div>
+            <section class="baspage">
+                <section id="historique">
+                    <div class="enr">
+                        <h2>Enregistrement</h2>
+                        <button id="enreg"></button>
+                    </div>
+                    <button id="lectbtn">Lecture d'enregistrement</button>
+                    <button id="stopbtn">Stop</button>
+                <div id="log"></div>
+                </section>
+                <div class="choix">
+                    <h3>Chansons disponibles</h3>
+                    <label for="presetSongs">Choisir une chanson :</label>
+                    <select id="presetSongs" style="width: 220px;">
+                        <option value="">-- Sélectionnez une chanson --</option>
+                        <option value="audio/1.mp3">Chanson 1</option>
+                        <option value="audio/2.mp3">Chanson 2</option>
+                        <option value="audio/3.mp3">Chanson 3</option>
+                    </select>
+                    <button id="lecturebtn">Lecture</button>
+                    <button id="stpbtn">Stop</button>
+                    <br><br>
+                    <audio id="audiop"></audio>
+                </div>
+            </section>
         </main>
 		<footer>© 2025 - Jeu Piano Virtuel réalisé par Amina Jemai</footer>
 	</body>
