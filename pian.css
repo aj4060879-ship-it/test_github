@@ -96,7 +96,6 @@ main{
     left:0;
     width:100%;
     height:5rem;
-    pointer-events:none;
 
 }
 .touchenoire{
@@ -108,23 +107,23 @@ main{
     margin:0 0.05rem;
     z-index: 10;
 }
-#dod {
+#Dod {
     position:absolute;
     left: calc(5rem * 0.8);
 }
-#redi {
+#Redi {
     position:absolute;
     left: calc(5rem * 1.8);
 }
-#fad {
+#Fad {
     position:absolute;
     left: calc(5rem * 3.8);
 }
-#sold {
+#Sold {
     position:absolute;
     left: calc(5rem * 4.8);
 }
-#lad {
+#Lad {
     position:absolute;
     left: calc(5rem * 5.85);
 }
@@ -189,6 +188,17 @@ footer{
     border-radius:10rem;
     padding:1rem;
 }
+#metronome{
+    background-color:white;
+    color:black;
+    border-radius:10rem;
+    padding:1rem;
+}
+.metronome-active{
+    background-color: grey;
+    color:white;
+    transition:0.1s;
+}
 .baspage{
     display:flex;
     flex-direction:row;
@@ -228,4 +238,8 @@ h2{
 }
 h3{
     color:rgb(56, 88, 56);
+}
+.active{
+    background-color: #ffe28a;
+    transition:0.1s;
 }
