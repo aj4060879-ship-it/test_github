@@ -103,3 +103,89 @@ document.getElementById("metronomeBtn").addEventListener("click",()=>{
     if(metroo)stopMetronome();
     else startMetronome();
 });
+//lecture des chansons
+const choixChanson=document.getElementById("presetSongs");
+const audioPlay=document.getElementById("audiop");
+const btnLect=document.getElementById("lecturebtn");
+const btnStop=document.getElementById("stpbtn");
+btnLect.addEventListener("click",()=>{
+    const chanson=choixChanson.value;
+    if(!chanson){
+        alert("Veuillez choisir une chanson!");
+        return;
+    }
+    audioPlay.src=chanson;
+    audioPlay.play();
+});
+btnStop.addEventListener("click",()=>{
+    audioPlay.pause();
+    audioPlay.currentTime=0;
+});
+//enregistrement des chansons
+let mediaRecorder;
+let morceauAudio=[];
+const enregBtn=document.getElementById("enreg");
+const stopEnregBtn=document.getElementById("stopEnreg");
+const listeEnreg=document.getElementById("listeEnreg");
+
+enregBtn.addEventListener("click",async()=>{
+    try{
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    mediaRecorder= new MediaRecorder(stream);
+    morceauAudio=[];
+    mediaRecorder.ondataavailable=(event)=>{
+        morceauAudio.push(event.data);
+    };
+    mediaRecorder.onstop=()=>{
+            const audioBlob=new Blob(morceauAudio,{ type:"audio/mp3" });
+            const audioURL=URL.createObjectURL(audioBlob);
+            const li=document.createElement("li");
+            const audio=new Audio(audioURL);
+            const playBtn=document.createElement("button");
+            playBtn.textContent = "Lecture";
+            const stopBtn = document.createElement("button");
+            stopBtn.textContent = "Stop";
+            playBtn.addEventListener("click",()=>{
+                audio.currentTime=0;
+                audio.play();
+            });
+            stopBtn.addEventListener("click",()=>{
+                audio.pause();
+                audio.currentTime=0;
+            });
+            li.textContent="Enregistrement: ";
+            li.appendChild(playBtn);
+            li.appendChild(stopBtn);
+            listeEnreg.appendChild(li);
+    };
+    mediaRecorder.start();
+    console.log("Enregistrement démarré!");
+    }catch(error){
+    console.log("erreur micro:",error);
+    alert("Accès au micro refusé");
+    }
+});
+
+stopEnregBtn.addEventListener("click",()=>{
+    if (mediaRecorder && mediaRecorder.state==="recording"){
+        mediaRecorder.stop();
+        console.log("Enregistrement arrêté");
+    }
+});
+//changement d'octave avec les touches clavier
+document.addEventListener("keydown",(event)=>{
+    const octaveInput=document.getElementById("octave");
+    let octave=parseInt(octaveInput.value);
+    if (event.key==="+"){
+        if(octave<2){
+            octave++;
+            octaveInput.value=octave;
+        }
+    }
+    if(event.key==="-"){
+        if(octave>-2){
+            octave--;
+            octaveInput.value=octave;
+        }
+    }
+});

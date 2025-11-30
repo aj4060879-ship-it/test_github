@@ -22,6 +22,41 @@ p{
     font-size:1.5rem;
     text-align: center;
 }
+.help{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position:relative;
+    gap:1.5rem;
+    padding:1.5rem;
+    margin:1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    background-color: rgb(234, 248, 238);
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+.helpoct{
+    font-size:1rem;
+}
+.helpoctbtn{
+    font-size:1rem;
+    padding:1.5rem;
+    margin:1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 25%;
+    font-weight: bolder;
+}
+.helpsus{
+    font-size:1rem;
+}
+.helpsusbtn{
+    font-size:1rem;
+    padding:1.5rem;
+    margin:1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 25%;
+    font-weight: bolder;
+}
 .bl{
     display:flex;
     align-items: flex-end;
